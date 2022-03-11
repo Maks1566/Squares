@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.box1{
+			background: red;
+			height: 100px;
+			width: 100px;
+			transition: 1s;
+			position: absolute;
+			left: 300px;
+			top: 50px;
+		}
+		.box2{
+			background: blue;
+			height: 100px;
+			width: 100px;
+			transition: 1s;
+			position: absolute;
+			left: 1500px;
+			top: 300px;
+		}
+		.box3{
+			background: green;
+			height: 100px;
+			width: 100px;
+			transition: 1s;
+			position: absolute;
+			left: 1500px;
+			top: 0px;
+		}
+		.box4{
+			background: yellow;
+			height: 100px;
+			width: 100px;
+			transition: 1s;
+			position: absolute;
+			left: 1000px;
+			top: 200px;
+		}
+		.box5{
+			background: cyan;
+			height: 100px;
+			width: 100px;
+			transition: 1s;
+			position: absolute;
+			left: 900px;
+			top: 50px;
+		}
+		.box6{
+			background: brown;
+			height: 100px;
+			width: 100px;
+			transition: 1s;
+			position: absolute;
+			left: 500px;
+			top: 250px;
+		}
+	</style>
+</head>
+<body>
+	<h1>У тебя 9 секунд чтобы собрать все шарики</h1>
+	<h1>Счёт:<span class="scb"></span></h1>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="box6"></div>
+
+	<script type="text/javascript">
+		let b1 = document.querySelector(".box1");
+		let bl1 = 300;
+		let bt1 = 50;
+
+		let b2 = document.querySelector(".box2");
+		let bl2 = 1500;
+		let bt2 = 300;
+
+		let b3 = document.querySelector(".box3");
+		let bl3 = 1500;
+		let bt3 = 0;
+
+		let b4 = document.querySelector(".box4");
+		let bl4 = 1000;
+		let bt4 = 200;
+
+		let b5 = document.querySelector(".box5");
+		let bl5 = 900;
+		let bt5 = 50;
+
+		let b6 = document.querySelector(".box6");
+		let bl6 = 500;
+		let bt6 = 250;
+
+		let scb = document.querySelector(".scb");
+		let sc = 0;
+		scb.innerHTML = sc
+
+
+		b1.onclick = function(){
+			b1.style.display = "none"
+			sc = sc + 1;
+			scb.innerHTML = sc
+			if(sc==6){
+				alert("Ты выйграл!")
+				b1.style.display = "none"
+				b2.style.display = "none"
+				b3.style.display = "none"
+				b4.style.display = "none"
+				b5.style.display = "none"
+				b6.style.display = "none"
+			}
+		}
+		b2.onclick = function(){
+			b2.style.display = "none"
+			sc = sc + 1;
+			scb.innerHTML = sc
+			if(sc==6){
+				alert("Ты выйграл!")
+				b1.style.display = "none"
+				b2.style.display = "none"
+				b3.style.display = "none"
+				b4.style.display = "none"
+				b5.style.display = "none"
+				b6.style.display = "none"
+			}
+		}
+		b3.onclick = function(){
+			b3.style.display = "none"
+			sc = sc + 1;
+			scb.innerHTML = sc
+			if(sc==6){
+				alert("Ты выйграл!")
+				b1.style.display = "none"
+				b2.style.display = "none"
+				b3.style.display = "none"
+				b4.style.display = "none"
+				b5.style.display = "none"
+				b6.style.display = "none"
+			}
+		}
+		b4.onclick = function(){
+			b4.style.display = "none"
+			sc = sc + 1;
+			scb.innerHTML = sc
+			if(sc==6){
+				alert("Ты выйграл!")
+				b1.style.display = "none"
+				b2.style.display = "none"
+				b3.style.display = "none"
+				b4.style.display = "none"
+				b5.style.display = "none"
+				b6.style.display = "none"
+			}
+		}
+		b5.onclick = function(){
+			b5.style.display = "none"
+			sc = sc + 1;
+			scb.innerHTML = sc
+			if(sc==6){
+				alert("Ты выйграл!")
+				b1.style.display = "none"
+				b2.style.display = "none"
+				b3.style.display = "none"
+				b4.style.display = "none"
+				b5.style.display = "none"
+				b6.style.display = "none"
+			}
+		}
+		b6.onclick = function(){
+			b6.style.display = "none"
+			sc = sc + 1;
+			scb.innerHTML = sc
+			if(sc==6){
+				alert("Ты выйграл!")
+				b1.style.display = "none"
+				b2.style.display = "none"
+				b3.style.display = "none"
+				b4.style.display = "none"
+				b5.style.display = "none"
+				b6.style.display = "none"
+			}
+		}
+
+		let def = function(){
+			if(sc<=5){alert("Ты проиграл! Твой счёт:" + sc)}
+			b1.style.display = "none"
+			b2.style.display = "none"
+			b3.style.display = "none"
+			b4.style.display = "none"
+			b5.style.display = "none"
+			b6.style.display = "none"
+		}
+
+		let brev = function(){
+			bl1 = bl1 - 200;
+			b1.style.left = bl1 + "px"
+
+			bl2 = bl2 - 200;
+			b2.style.left = bl2 + "px"
+
+			bl3 = bl3 - 200;
+			b3.style.left = bl3 + "px"
+
+			bl4 = bl4 - 200;
+			b4.style.left = bl4 + "px"
+
+			bl5 = bl5 - 200;
+			b5.style.left = bl5 + "px"
+
+			bl6 = bl6 - 200;
+			b6.style.left = bl6 + "px"
+		}
+
+
+		let bcr = function(){
+			b1.style.borderRadius = "50px"
+			b2.style.borderRadius = "50px"
+			b3.style.borderRadius = "50px"
+			b4.style.borderRadius = "50px"
+			b5.style.borderRadius = "50px"
+			b6.style.borderRadius = "50px"
+		}
+
+
+		let bgo = function(){
+			bl1 = bl1 + 500;
+			b1.style.left = bl1 + "px"
+			bt1 = bt1 + 500;
+			b1.style.top = bt1 + "px"
+
+			bl2 = bl2 + 500;
+			b2.style.left = bl2 + "px"
+			bt2 = bt2 + 500;
+			b2.style.top = bt2 + "px"
+
+			bl3 = bl3 + 500;
+			b3.style.left = bl3 + "px"
+			bt3 = bt3 + 500;
+			b3.style.top = bt3 + "px"
+
+			bl4 = bl4 + 500;
+			b4.style.left = bl4 + "px"
+			bt4 = bt4 + 500;
+			b4.style.top = bt4 + "px"
+
+			bl5 = bl5 + 500;
+			b5.style.left = bl5 + "px"
+			bt5 = bt5 + 500;
+			b5.style.top = bt5 + "px"
+
+			bl6 = bl6 + 500;
+			b6.style.left = bl6 + "px"
+			bt6 = bt6 + 500;
+			b6.style.top = bt6 + "px"
+		}
+
+
+		let bgo2 = function(){
+			bl1 = bl1 + 100;
+			b1.style.left = bl1 + "px"
+			bt1 = bt1 - 500;
+			b1.style.top = bt1 + "px"
+
+			bl2 = bl2 + 100;
+			b2.style.left = bl2 + "px"
+			bt2 = bt2 - 500;
+			b2.style.top = bt2 + "px"
+
+			bl3 = bl3 + 100;
+			b3.style.left = bl3 + "px"
+			bt3 = bt3 - 500;
+			b3.style.top = bt3 + "px"
+
+			bl4 = bl4 + 100;
+			b4.style.left = bl4 + "px"
+			bt4 = bt4 - 500;
+			b4.style.top = bt4 + "px"
+
+			bl5 = bl5 + 100;
+			b5.style.left = bl5 + "px"
+			bt5 = bt5 - 500;
+			b5.style.top = bt5 + "px"
+
+			bl6 = bl6 + 100;
+			b6.style.left = bl6 + "px"
+			bt6 = bt6 - 500;
+			b6.style.top = bt6 + "px"
+		}
+
+
+		let bhome = function(){
+			bl1 = 300;
+			b1.style.left = bl1 + "px"
+			bt1 = 50;
+			b1.style.top = bt1 + "px"
+			b1.style.borderRadius = "0px"
+
+			bl2 = 1500;
+			b2.style.left = bl2 + "px"
+			bt2 = 300;
+			b2.style.top = bt2 + "px"
+			b2.style.borderRadius = "0px"
+
+			bl3 = 1500;
+			b3.style.left = bl3 + "px"
+			bt3 = 0;
+			b3.style.top = bt3 + "px"
+			b3.style.borderRadius = "0px"
+
+			bl4 = 1000;
+			b4.style.left = bl4 + "px"
+			bt4 = 200;
+			b4.style.top = bt4 + "px"
+			b4.style.borderRadius = "0px"
+
+			bl5 = 900;
+			b5.style.left = bl5 + "px"
+			bt5 = 50;
+			b5.style.top = bt5 + "px"
+			b5.style.borderRadius = "0px"
+
+			bl6 = 500;
+			b6.style.left = bl6 + "px"
+			bt6 = 250;
+			b6.style.top = bt6 + "px"
+			b6.style.borderRadius = "0px"
+		}
+		
+
+		setTimeout(brev, 1000)
+		setTimeout(bcr, 1500)
+		setTimeout(bgo, 2000)
+		setTimeout(brev, 3500)
+		setTimeout(bgo2, 4000)
+		setTimeout(bhome, 4500)
+
+		setTimeout(brev, 5000)
+		setTimeout(bcr, 5500)
+		setTimeout(bgo, 6000)
+		setTimeout(brev, 7500)
+		setTimeout(bgo2, 8000)
+		setTimeout(bhome, 8000)
+
+		setTimeout(def, 9000)
+
+
+
+	</script>
+
+</body>
+</html>
